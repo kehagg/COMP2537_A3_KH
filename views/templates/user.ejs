@@ -1,0 +1,14 @@
+<div class="justify-content-center">
+    <ul class="list-group border mb-3">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span class="fs-5">
+                <%= user.username %>
+            </span>
+            <form action="/admin" method="POST">
+                <button class="btn btn-secondary btn-sm me-2" name="userType" value="user">User</button>
+                <button class="btn btn-danger btn-sm" name="userType" value="admin">Admin</button>
+                <input type="hidden" name="userName" value="<%= user.username %>">
+            </form>
+        </li>
+    </ul>
+</div>

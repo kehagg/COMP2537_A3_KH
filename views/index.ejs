@@ -1,0 +1,19 @@
+<%- include("templates/header") %>
+
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <% if (!authenticated) { %>
+            <div class="col-md-4">
+                <button class="btn btn-primary btn-block mb-3" onclick="window.location.href='/signup'">Sign Up</button>
+                <button class="btn btn-success btn-block" onclick="window.location.href='/login'">Log In</button>
+            </div>
+            <% } else { %>
+                <div class="col-md-4 text-center">
+                    <div class="mb-3">Hello, <%= username %>!</div>
+                    <button class="btn btn-primary btn-block mb-3" onclick="window.location.href='/members'">Go to
+                        Members Area</button>
+                    <button class="btn btn-danger btn-block" onclick="window.location.href='/logout'">Logout</button>
+                </div>
+            <% } %>
+    </div>
+
+    <%- include("templates/footer") %>

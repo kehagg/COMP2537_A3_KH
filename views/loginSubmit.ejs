@@ -1,0 +1,16 @@
+<%- include("templates/header") %>
+
+    <div class="container mt-5">
+        <% if (missing==1) { %>
+            <div class="alert alert-danger" role="alert">
+                User not found.
+            </div>
+            <% } else if (missing==2) { %>
+                <div class="alert alert-danger" role="alert">
+                    Invalid password.
+                </div>
+                <% } %>
+                    <a href="/login" class="btn btn-primary mt-4">Try Again</a>
+    </div>
+
+    <%- include("templates/footer") %>

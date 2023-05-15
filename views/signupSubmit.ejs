@@ -1,0 +1,25 @@
+<%- include("templates/header") %>
+
+    <div class="container">
+        <br>
+        <div class="alert alert-danger">
+            <% if (missing==1) { %>
+                Name, email, and password are required.
+            <% } else if (missing==2) { %>
+                Name and email are required.
+            <% } else if (missing==3) { %>
+                Name and password are required.
+            <% } else if (missing==4) { %>
+                Email and password are required.
+            <% } else if (missing==5) { %>
+                Name is required.
+            <% } else if (missing==6) { %>
+                Email is required.
+            <% } else if (missing==7) { %>
+                Password is required.
+            <% } %>
+        </div>
+        <a href='/signup' class="btn btn-primary">Try Again</a>
+    </div>
+
+    <%- include("templates/footer") %>
